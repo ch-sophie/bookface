@@ -12,12 +12,13 @@ import {
 } from "react-router-dom";
 import Hall from './components/hall'
 import Floor from './components/floor'
+import Test from './components/testComponent';
 
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<SignIn />} />
+      <Route path="/" element={<Hall />} />   
       <Route path="signUp" element={<SignUp />} />
       <Route path='signIn' element={<SignIn />} />
       <Route path='hall' element={<Hall />} />
