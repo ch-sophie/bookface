@@ -1,30 +1,36 @@
 import React from 'react'
-import {Container,Form,Button,Navbar} from 'react-bootstrap/';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrain } from "@fortawesome/free-solid-svg-icons";
+// import {Container,Form,Button,Navbar} from 'react-bootstrap/';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faPerson,faSearch,faVideo } from "@fortawesome/free-solid-svg-icons";
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import HomeIcon from '@mui/icons-material/Home';
+import SearchIcon from '@mui/icons-material/Search';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import PersonPinIcon from '@mui/icons-material/PersonPin';
+import Box from '@mui/material/Box';
+
+// import VideocamIcon from '@mui/icons-material/Videocam';
 
 
 const Home = () => {
-  return (  
-    <Container fluid>
-          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Book Face</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-        <Form className="me-auto d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-        </Navbar.Collapse>
-        </Navbar>
-        {/* <FontAwesomeIcon icon= {faTrain} /> */}
+  const [value, setValue] = React.useState(0);
 
-      </Container>
+  return (  
+    <Box sx={{ width: "100%",bottom:0,position:"fixed", bgcolor: '#1769aa'}}>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        <BottomNavigationAction  href="./components/" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Search" icon={<SearchIcon />} />
+        <BottomNavigationAction label="video" icon={<VideocamIcon />} />
+        <BottomNavigationAction label="profile" icon={<PersonPinIcon />} />
+      </BottomNavigation>
+    </Box>
 
   )
 }
