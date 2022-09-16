@@ -24,12 +24,19 @@ const base = css`
     }
 `
 
+const styleLink = css`
+    &:visited {
+        text-decoration: none;
+        color: #000;
+    }
+`
+
 export default function Navigation () {
     return (
         <div css={css`${base}`}>
-            <div><Link to='/floor'><SearchOutlinedIcon sx={{fontSize: 25}} /></Link></div>
-            <div><Link to='/hall'><HomeRoundedIcon sx={{fontSize: 25}} /></Link></div>
-            <div><Link to='#'><AccountCircleOutlinedIcon sx={{fontSize: 25}} /></Link></div>
+            <div><Link css={css`${styleLink}`} to='/floor'><SearchOutlinedIcon sx={{fontSize: 25}} /></Link></div>
+            <div><Link css={css`${styleLink}`} to='/hall'><HomeRoundedIcon sx={{fontSize: 25}} /></Link></div>
+            <div><Link css={css`${styleLink}`} to='#'><AccountCircleOutlinedIcon sx={{fontSize: 25}} /></Link></div>
         </div>
     )
 }
