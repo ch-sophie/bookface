@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './icons/logo.svg';
 import './App.css';
 import SignUp from './components/signUp';
 import SignIn from './components/signIn';
@@ -18,7 +17,7 @@ import Test from './components/testComponent';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Hall />} />   
+      <Route path="/" element={<Hall />} />
       <Route path="signUp" element={<SignUp />} />
       <Route path='signIn' element={<SignIn />} />
       <Route path='hall' element={<Hall />} />
