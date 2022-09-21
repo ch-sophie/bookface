@@ -12,8 +12,8 @@ dotenv.config();
 
 // mongoose
 // connect to my database
-mongoose.connect('mongodb+srv://soph:auth123@cluster0.cixjynk.mongodb.net/test',{useNewUrlParser: true, useUnifiedTopology : true})
-.then(() => console.log('connected'))
+mongoose.connect('mongodb+srv://soph:social-app123@users.twgqlhj.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
+.then(() => console.log('connected to database'))
 .catch((err) => console.log(err));
 
 /* middleware 
@@ -27,12 +27,12 @@ app.use(morgan("common"));
 //     res.send("Hello world");
 // })
 
-// app.get("/users", (req, res) => {
-//     res.send("Welcome to users page");
-// })
+app.get("/users", (req, res) => {
+    res.send("Welcome to users page");
+})
 
 // Routes
-app.use("/users", userRouter);
+app.use("./routes/users", userRouter);
 app.use("/auth", authRouter);
 app.use("/posts", postRouter);
 
