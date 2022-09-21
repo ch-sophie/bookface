@@ -25,6 +25,13 @@ const Profile = () => {
 				<button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
 
 			</div>
+      <div class="profile-bio">
+
+<p><span class="profile-real-name">bhama</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit camera
+</p>
+
+</div>
+
 
 			<div class="profile-stats">
 
@@ -36,12 +43,6 @@ const Profile = () => {
 
 			</div>
 
-			<div class="profile-bio">
-
-				<p><span class="profile-real-name">bhama</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit camera
-        </p>
-
-			</div>
 
 		</div>
 
