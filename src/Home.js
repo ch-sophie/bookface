@@ -9,9 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 import Box from '@mui/material/Box';
-
-// import VideocamIcon from '@mui/icons-material/Videocam';
-
+import Profile from './components/profilepage/Profile';
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -25,7 +23,7 @@ const Home = () => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction  href="./components/" label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction  href="./components/profilepage/Profile.js" label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction label="Search" icon={<SearchIcon />} />
         <BottomNavigationAction label="video" icon={<VideocamIcon />} />
         <BottomNavigationAction label="profile" icon={<PersonPinIcon />} />
