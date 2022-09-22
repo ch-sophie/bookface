@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../img/home1.jpg'
+import image from './img/home1.jpg'
 import setimage from '../img/logo.png'
 import Navigation from './navigation'
 import Header from './header'

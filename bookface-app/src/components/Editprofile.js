@@ -1,5 +1,5 @@
 import React from 'react'
-import setimage from '../img/home1.jpg'
+import setimage from './img/home1.jpg'
 
 
 const Editprofile = () => {
