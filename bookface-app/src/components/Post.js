@@ -4,7 +4,8 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 // import  logo  from "../img/home1.jpg";
 import { Users } from "./Datas";
 import FavoriteIcon from '@mui/icons-material/Favorite';
-  // import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+// import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { useState } from "react";
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 /** @jsxImportSource @emotion/react */
@@ -20,6 +21,14 @@ const base = css`
 
 export default function Post({ post }) {
   console.log(post);
+  const [like,setLike] = useState(post.like)
+  const [isLiked,setIsLiked] = useState(false)
+
+  const likeButton =()=>{
+    setLike(isLiked ? like-1 : like+1)
+    setIsLiked(!isLiked)
+  }
+
   return (
     <div className="post" css={css`${base}`}>
       <div className="postWrapper">
@@ -56,7 +65,7 @@ export default function Post({ post }) {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-         <span className="likeIcon">{<FavoriteIcon />}</span> 
+         <span className="likeIcon onClick={likeButton}">{<FavoriteIcon />}</span> 
          <span className="likeIcon-comments" >{<ChatBubbleOutlineOutlinedIcon />}</span> 
          {/* <span className="likeIcon-share">{<SendOutlinedIcon />}</span> */}
           </div>
