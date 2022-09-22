@@ -36,7 +36,7 @@ export default function Navigation () {
         <div css={css`${base}`}>
             <div><Link css={css`${styleLink}`} to='/floor'><SearchOutlinedIcon sx={{fontSize: 25}} /></Link></div>
             <div><Link css={css`${styleLink}`} to='/hall'><HomeRoundedIcon sx={{fontSize: 25}} /></Link></div>
-            <div><Link css={css`${styleLink}`} to='#'><AccountCircleOutlinedIcon sx={{fontSize: 25}} /></Link></div>
+            <div><Link css={css`${styleLink}`} to='/profile'><AccountCircleOutlinedIcon sx={{fontSize: 25}} /></Link></div>
         </div>
     )
 }
