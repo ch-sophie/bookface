@@ -11,10 +11,6 @@ import PersonPinIcon from '@mui/icons-material/PersonPin';
 import Box from '@mui/material/Box';
 import Profile from './components/profilepage/Profile';
 
-
-// import VideocamIcon from '@mui/icons-material/Videocam';
-
-
 const Home = () => {
   const [value, setValue] = React.useState(0);
 

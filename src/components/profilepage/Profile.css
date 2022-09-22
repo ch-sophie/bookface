@@ -299,14 +299,6 @@ img {
     }
 }
 
-/*
-
-The following code will only run if your browser supports CSS grid.
-
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox & floated styling. 
-
-*/
-
 @supports (display: grid) {
     .profile {
         display: grid;
@@ -367,3 +359,13 @@ Remove or comment-out the code block below to see how the browser will fall-back
         }
     }
 }
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .item{
+    width: 30%;
+  }
+  

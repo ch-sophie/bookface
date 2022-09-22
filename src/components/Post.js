@@ -24,8 +24,7 @@ export default function Post({ post }) {
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
-          <div className="postTopLeft">
-            
+          <div className="postTopLeft">         
             <img
             src={require('./img/' +
             Users.filter((u) => u.id === post.userId)[0].profilePicture +
@@ -62,10 +61,16 @@ export default function Post({ post }) {
          {/* <span className="likeIcon-share">{<SendOutlinedIcon />}</span>  */}
           <span className="postLikeCounter"> {like}people like it</span>
           </div>
-          <div className="postBottomRight ">
               {/* <span className="postCommentText">{post.comment} comments</span> */}
-          </div>
         </div>
+        <div className="postBottomRight ">
+
+        <div className="postCommentText">
+            <input type="text" placeholder="add comment"/>
+
+            </div>
+            </div>
+
       </div>
     </div>
   );
