@@ -17,10 +17,11 @@ export default function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            <img
+          <img
+            src={require('./img/' +
+            Users.filter((u) => u.id === post.userId)[0].profilePicture +
+            '.png')}
               className="postProfileImg"
-              src=
-              {Users.filter((u) => u.id === post?.userId)[0].profilePicture}
               alt=""
             />
            {/* <Avatar alt="Travis Howard" src={Users} /> */}
@@ -38,7 +39,10 @@ export default function Post({ post }) {
         </div>
         <div className="postCenter">
            <span className="postText">{post?.desc}</span> 
-           <img  className ='postImg' src={post.photo} alt="" /> 
+           <img  className ='postImg' 
+           src={require('./img/' +
+           post.photo)}
+           alt="" /> 
 
         </div>
         <div className="postBottom">
