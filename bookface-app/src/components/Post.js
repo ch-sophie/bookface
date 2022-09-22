@@ -8,12 +8,21 @@ import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { useState } from "react";
 
+/** @jsxImportSource @emotion/react */
+import { css, jsx } from '@emotion/react'
+
 // import Avatar from '@mui/material/Avatar';
+
+const base = css`
+  @media (min-width: 600px) {
+    width: 600px;
+  }
+`
 
 export default function Post({ post }) {
   console.log(post);
   return (
-    <div className="post">
+    <div className="post" css={css`${base}`}>
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
