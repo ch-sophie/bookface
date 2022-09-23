@@ -1,10 +1,7 @@
 import "../components/Post.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-// import  Users  from "../img/logo.png";
-// import  logo  from "../img/home1.jpg";
 import { Users } from "./Datas";
 import FavoriteIcon from '@mui/icons-material/Favorite';
-// import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { useState } from "react";
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
@@ -65,13 +62,13 @@ export default function Post({ post }) {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-         <span className="likeIcon onClick={likeButton}">{<FavoriteIcon />}</span> 
+         <span className="likeIcon" onClick={likeButton} >{<FavoriteIcon />}</span> 
          <span className="likeIcon-comments" >{<ChatBubbleOutlineOutlinedIcon />}</span> 
          {/* <span className="likeIcon-share">{<SendOutlinedIcon />}</span> */}
           </div>
           <div className="postBottomRight">
             {/* <span className="postCommentText">{post.comment} comments</span> */}
-            <span className="postCommentText"> {post.like}people like it</span>
+            <span className="postCommentText"> {like}people like it</span>
 
           </div>
         </div>
