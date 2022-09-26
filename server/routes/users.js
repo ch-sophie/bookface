@@ -2,7 +2,29 @@ const User = require("../models/User");
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
 
-// update user
+// get a user
+router.get("/:id", async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        const {password, updatedAt, ...other} = user._doc;
+        res.status(200).json(other);
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
+
+// get all
+router.get("/", async (req, res) => {
+    try {
+        const user = await User.find({}).then(function (user) {
+            res.status(200).json(user);
+        });
+    } catch (err){
+        res.status(500).json(err);
+    }
+});
+
+// update user edit and userId
 router.put("/:id", async (req, res) => {
     if (req.body.userId === req.params.id || req.body.isAdmin) {
         if (req.body.password){
@@ -37,17 +59,6 @@ router.delete("/:id", async (req, res) => {
         }
     } else{
         return res.status(403).json("You can only delete your account!");
-    }
-});
-
-// get a user
-router.get("/:id", async (req, res) => {
-    try {
-        const user = await User.findById(req.params.id);
-        const {password, updatedAt, ...other} = user._doc;
-        res.status(200).json(other);
-    } catch (err){
-        res.status(500).json(err);
     }
 });
 

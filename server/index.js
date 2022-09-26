@@ -27,12 +27,13 @@ app.use(morgan("common"));
 //     res.send("Hello world");
 // })
 
-app.get("/users", (req, res) => {
-    res.send("Welcome to users page");
-})
+// test route users
+// app.get("/users", (req, res) => {
+//     res.send("Welcome to users page");
+// })
 
 // Routes
-app.use("./routes/users", userRouter);
+app.use("/users", userRouter);
 app.use("/auth", authRouter);
 app.use("/posts", postRouter);
 
