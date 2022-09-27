@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../img/home1.jpg'
-import setimage from '../img/logo.png'
+import setimage from '../img/home2.jpg'
 import Navigation from './navigation'
 import Header from './header'
 

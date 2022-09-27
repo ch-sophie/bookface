@@ -12,7 +12,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SignUp from './signUp';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import axios from "axios"
 
 function Copyright(props: any) {
   return (
@@ -37,6 +38,30 @@ export default function SignIn() {
       email: data.get('email'),
       password: data.get('password'),
     });
+
+    let payload = {
+      "email": data.get('email'),
+      "password": data.get('password'),
+    }
+
+  let config = {
+      method: "post",
+      url: "https://aniflix-getflix.herokuapp.com/user/login",
+      header: {
+          "Content_type": "application/json"
+      },
+      data: payload
+  }
+
+    axios(config)
+    .then((res) => {
+      const { token } = res.data
+      localStorage.setItem("token",token)
+      // dispatch(fetchLoginSuccess(res.data))
+      //navigate("/hall", { replace: true})       ==> Very Important to correct this one!
+      })
+    .catch(err => { console.log(err); });
+    
   };
 
   return (
