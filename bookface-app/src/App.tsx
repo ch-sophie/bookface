@@ -14,12 +14,13 @@ import Hall from './components/hall'
 import Floor from './components/floor'
 import Profile from './components/Profile';
 import Test from './components/testComponent';
+import TestLogin from './components/TestLogin';
 
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Hall />} />
+      <Route path="/" element={<SignIn />} />
       <Route path="signUp" element={<SignUp />} />
       <Route path='signIn' element={<SignIn />} />
       <Route path='hall' element={<Hall />} />
