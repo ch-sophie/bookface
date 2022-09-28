@@ -2,7 +2,6 @@ import "../components/Post.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Users } from "./Datas";
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import { useState } from "react";
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 /** @jsxImportSource @emotion/react */
@@ -36,11 +35,8 @@ export default function Post({ post }) {
             Users.filter((u) => u.id === post.userId)[0].profilePicture +
             '.png')}
               className="postProfileImg"
-             // src = {Users.filter((u) => u.id === post.userId)[0].profilePicture}
               alt=""
             />
-           {/* <Avatar alt="Travis Howard" src={Users} /> */}
-
             <span className="postUsername">
               {Users.filter((u) => u.id === post?.userId)[0].username}
             </span>
@@ -58,16 +54,13 @@ export default function Post({ post }) {
            src={require('./img/' +
            post.photo)}
            alt="" /> 
-
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
          <span className="likeIcon" onClick={likeButton} >{<FavoriteIcon />}</span> 
          <span className="likeIcon-comments" >{<ChatBubbleOutlineOutlinedIcon />}</span> 
-         {/* <span className="likeIcon-share">{<SendOutlinedIcon />}</span> */}
           </div>
           <div className="postBottomRight">
-            {/* <span className="postCommentText">{post.comment} comments</span> */}
             <span className="postCommentText"> {like}people like it</span>
 
           </div>
