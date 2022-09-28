@@ -1,7 +1,7 @@
 import "./Post.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 // import  Users  from "../img/logo.png";
-import  logo  from "./img/home2.jpg";
+// import  logo  from "./img/home2.jpg";
 import axios from "axios";
 import { Users } from "./Datas  ";
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -18,7 +18,7 @@ export default function Post({ post }) {
   const [like,setLike] = useState(post.like)
   const [isLiked,setIsLiked] = useState(false);
   const [user, setUser] = useState({});
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  // const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const {user: currentUser} = useContext(AuthContext);
 
   useEffect(() => {
