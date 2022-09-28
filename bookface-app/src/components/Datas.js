@@ -137,3 +137,4 @@ export const Datas = [
     comment: 12,
   },
 ];
+export default Datas

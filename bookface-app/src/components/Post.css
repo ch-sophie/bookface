@@ -94,3 +94,17 @@
       /* border-bottom: 1px dashed gray; */
       font-size: 15px;
   }
+
+  .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .item{
+      width: 30%;
+      margin: 7px;
+    }
+  
+  
+  

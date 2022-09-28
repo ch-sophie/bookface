@@ -11,12 +11,6 @@ export default function Hall () {
             <Header />
             {Datas.map((p => (<Post key= {p.id} post={p} />) ))}
             <Navigation />
-            <h1>Hall</h1>
-            {Datas.map((p => (
-      <Post key= {p.id} post={p} />
-
-     ) ))}
-             <Navigation />
         </div>
     )
 }
