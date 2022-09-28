@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, FormEvent } from "react";
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,7 +12,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import SignUp from './signUp';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import axios from "axios"
 
 function Copyright(props: any) {
   return (
@@ -30,6 +31,32 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignIn() {
+
+  const navigate = useNavigate()
+
+  const [errorMessages, setErrorMessages] = useState({
+    name: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // User Login info
+  const database = [
+    {
+      username: "user1",
+      password: "pass1"
+    },
+    {
+      username: "user2",
+      password: "pass2"
+    }
+  ];
+
+  const errors = {
+    email: "invalid username",
+    pass: "invalid password"
+  };
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -37,10 +64,28 @@ export default function SignIn() {
       email: data.get('email'),
       password: data.get('password'),
     });
+
+    const userData = database.find((user) => user.username === data.get('email'))
+    if (userData) {
+      if (userData.password !== data.get('password')) {
+        // Invalid password
+        setErrorMessages({ name: "pass", message: errors.pass });
+      } else {
+        setIsSubmitted(true);
+      }
+    } else {
+      // Username not found
+      setErrorMessages({ name: "email", message: errors.email });
+    }
   };
 
-  return (
-    <ThemeProvider theme={theme}>
+  const renderErrorMessage = (name: string) =>
+    name === errorMessages.name && (
+      <div className="error">{errorMessages.message}</div>
+    );
+
+    const renderForm =(
+      <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
@@ -67,6 +112,7 @@ export default function SignIn() {
               autoComplete="email"
               autoFocus
             />
+            {renderErrorMessage('email')}
             <TextField
               margin="normal"
               required
@@ -77,6 +123,7 @@ export default function SignIn() {
               id="password"
               autoComplete="current-password"
             />
+            {renderErrorMessage('pass')}
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -108,5 +155,13 @@ export default function SignIn() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    )
+
+  return (
+    <div>
+      <>
+        {isSubmitted ? navigate('/hall') : renderForm}
+      </>
+    </div>
   );
 }
