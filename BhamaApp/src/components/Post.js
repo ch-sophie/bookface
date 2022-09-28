@@ -18,7 +18,7 @@ export default function Post({ post }) {
   const [like,setLike] = useState(post.like)
   const [isLiked,setIsLiked] = useState(false);
   const [user, setUser] = useState({});
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
+  // const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
   const {user: currentUser} = useContext(AuthContext);
 
   useEffect(() => {
