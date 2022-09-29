@@ -19,6 +19,7 @@ router.post("/register", async (req, res) => {
             password: hashedPassword,
         });
   
+
         // save user and respond
         const user = await newUser.save();
         res.status(200).json(user);
@@ -28,7 +29,7 @@ router.post("/register", async (req, res) => {
     }
 });
 
-// LOGIN POST email and password
+// Login POST email and password
 router.post("/login", async (req, res) => {
     try {
         const user = await User.findOne({ email: req.body.email });
@@ -42,5 +43,6 @@ router.post("/login", async (req, res) => {
         res.status(500).json(err);
     }
 });
-  
+
+
 module.exports = router;
