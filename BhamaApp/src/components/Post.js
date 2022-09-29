@@ -2,7 +2,7 @@ import "./Post.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 // import  Users  from "../img/logo.png";
 import  logo  from "./img/home2.jpg";
-import { Users } from "./Datas";
+import { Users } from "./Datas  ";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 // import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
@@ -24,16 +24,15 @@ export default function Post({ post }) {
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
-          <div className="postTopLeft">         
+          <div className="postTopLeft">
+            
             <img
             src={require('./img/' +
             Users.filter((u) => u.id === post.userId)[0].profilePicture +
             '.png')}
               className="postProfileImg"
-             // src = {Users.filter((u) => u.id === post.userId)[0].profilePicture}
               alt=""
             />
-           {/* <Avatar alt="Travis Howard" src={Users} /> */}
 
             <span className="postUsername">
               {Users.filter((u) => u.id === post?.userId)[0].username}
