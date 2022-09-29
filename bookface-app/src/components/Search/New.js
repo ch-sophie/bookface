@@ -9,6 +9,8 @@ import setimage from '../img/home1.jpg'
 import {Link} from 'react-router-dom'
 
 
+
+
 function New({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
