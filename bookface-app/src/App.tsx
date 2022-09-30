@@ -19,7 +19,7 @@ import Test from './components/testComponent';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Hall />} />
+      <Route path="/" element={<SignIn />} />
       <Route path="signUp" element={<SignUp />} />
       <Route path='signIn' element={<SignIn />} />
       <Route path='hall' element={<Hall />} />
