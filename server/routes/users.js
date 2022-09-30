@@ -13,7 +13,7 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-// get all
+// get all users
 router.get("/", async (req, res) => {
     try {
         const user = await User.find({}).then(function (user) {
