@@ -13,6 +13,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+// import { url } from 'inspector';
 
 function Copyright(props: any) {
   return (
@@ -28,9 +29,11 @@ function Copyright(props: any) {
 }
 
 const theme = createTheme();
-const navigate = useNavigate()
 
 export default function SignUp() {
+
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -40,23 +43,32 @@ export default function SignUp() {
     });
 
     let payload = {
+      "firstName": data.get('firstName'),
+      "lastName": data.get('lastName'),
       "email": data.get('email'),
       "password": data.get('password')
   }
 
-  let config = {
-      method: "post",
-      url: "https://localhost:3001/auth/register",
-      header: {
-          "Content_type": "application/json"
-      },
-      data: payload
-  }
+  // let config = {
+  //     method: "POST",
+  //     url: "https://localhost:3001/auth/register",
+  //     header: {
+  //         "Content_type": "application/json"
+  //     },
+  //     data: payload
+  // }
 
-  axios(config)
+
+  axios.post("http://localhost:3001/auth/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: payload
+  })
   .then((res) => {
-      const { token } = res.data
-      localStorage.setItem("token",token)
+      // const { token } = res.data
+      // localStorage.setItem("token",token)
   // dispatch(fetchLoginSuccess(res.data))
   navigate("/signIn", { replace: true})
   })
