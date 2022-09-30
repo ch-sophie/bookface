@@ -28,9 +28,10 @@ function Copyright(props: any) {
 }
 
 const theme = createTheme();
-const navigate = useNavigate()
 
 export default function SignUp() {
+  const navigate = useNavigate()
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
