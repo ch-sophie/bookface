@@ -7,8 +7,13 @@ import './style.css'
 import Box from '@mui/material/Box';
 import setimage from '../img/home1.jpg'
 import {Link} from 'react-router-dom'
+import { css, jsx } from '@emotion/react'
 
-
+const base = css`
+  @media (min-width: 600px) {
+    width: 600px;
+  }
+`
 function New({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -33,12 +38,13 @@ function New({ placeholder, data }) {
   };
 
   return (
-    <Box sx={{ width: '100%', maxWidth: 500, }}>
-
+    // <Box sx={{ width: '100%', maxWidth: 500, }}>
+<div className="container-search" css={css`${base}`}>
     <div className="search">
-    <div><Link  to='/hall'><ArrowBackIcon sx={{fontSize: 40}} /></Link></div>
 
       <div className="searchInputs">
+      <div><Link  to='/hall'><ArrowBackIcon sx={{fontSize: 40}} /></Link></div>
+
         <input
           type="text"
           placeholder={placeholder}
@@ -87,8 +93,8 @@ function New({ placeholder, data }) {
 
            </div>
 
-
-    </Box>
+           </div>
+    // </Box>
 
   );
 }
