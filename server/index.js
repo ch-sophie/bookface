@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
+const cors = require("cors");
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/posts");
@@ -21,6 +22,7 @@ use methods to call between processing req and res */
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+app.use(cors);
 
 // test
 // app.get("/", (req, res) => {
