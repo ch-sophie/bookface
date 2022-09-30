@@ -9,11 +9,6 @@ import setimage from '../img/home1.jpg'
 import {Link} from 'react-router-dom'
 import { css, jsx } from '@emotion/react'
 
-const base = css`
-  @media (min-width: 600px) {
-    width: 600px;
-  }
-`
 function New({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
