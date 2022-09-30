@@ -30,12 +30,9 @@
     height: 30px;
     width: 300px;
   }
-  /* p{
-margin-top: 100px;
-  } */
   .searchIcon {
     height: 60px;
-    width: 50px;
+    width: 900px;
     background-color: white;
     display: grid;
     place-items: center;
@@ -48,15 +45,16 @@ margin-top: 100px;
     font-size: 35px;
   }
   
-  /* .dataResult {
+  .dataResult {
     margin-top: 5px;
-    width: 300px;
-    height: 200px;
+    width: 50%;
+    height: 50%;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     overflow: hidden;
     overflow-y: auto;
-  } */
+    text-align: center;
+  }
   
   .dataResult::-webkit-scrollbar {
     display: none;
