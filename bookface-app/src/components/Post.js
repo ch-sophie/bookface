@@ -33,7 +33,7 @@ export default function Post({ post }) {
           <img
             src={require('./img/' +
             Users.filter((u) => u.id === post.userId)[0].profilePicture +
-            '.png')}
+            '.jpg')}
               className="postProfileImg"
               alt=""
             />
