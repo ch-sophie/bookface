@@ -73,17 +73,17 @@ function New({ placeholder, data }) {
         </div>
       )}
     </div>
-    <div className="gallery">
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
+    <div className="gallery-search">
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
 
 
            </div>
