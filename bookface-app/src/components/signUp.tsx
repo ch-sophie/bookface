@@ -41,12 +41,13 @@ export default function SignUp() {
     });
 
     let payload = {
+      "firstName": data.get('firstName'),
+      "lastName": data.get('lastName'),
       "email": data.get('email'),
       "password": data.get('password')
   }
 
   let config = {
-      method: "post",
       url: "https://localhost:3001/auth/register",
       header: {
           "Content_type": "application/json"
@@ -54,11 +55,12 @@ export default function SignUp() {
       data: payload
   }
 
-  axios(config)
+  axios.post("https://localhost:3001/auth/register", payload)
   .then((res) => {
-      const { token } = res.data
-      localStorage.setItem("token",token)
+      //const { token } = res.data
+      //localStorage.setItem("token",token)
   // dispatch(fetchLoginSuccess(res.data))
+  console.log(res)
   navigate("/signIn", { replace: true})
   })
   .catch(err => { console.log(err); });

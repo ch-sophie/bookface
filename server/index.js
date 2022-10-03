@@ -7,6 +7,10 @@ const morgan = require("morgan");
 const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/posts");
+const cors = require('cors')
+
+
+
 
 dotenv.config();
 
@@ -21,6 +25,7 @@ use methods to call between processing req and res */
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+app.use(cors());
 
 // test
 // app.get("/", (req, res) => {
