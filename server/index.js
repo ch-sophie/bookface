@@ -40,6 +40,6 @@ app.use("/auth", authRouter);
 app.use("/posts", postRouter);
 
 // PORT 
-app.listen(3001, () => {
-    console.log(`Server Started at ${3001}`)
+app.listen(4000, () => {
+    console.log(`Server Started at ${4000}`)
 })
