@@ -59,7 +59,7 @@ export default function SignUp() {
   // }
 
 
-  axios.post("http://localhost:3001/auth/register", {
+  axios.post("/api/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
