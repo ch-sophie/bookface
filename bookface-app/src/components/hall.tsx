@@ -5,7 +5,7 @@ import Navigation from './navigation'
 import Post from './Post'
 import { Datas } from './Datas'
 
-export default function Hall () {
+export default function Hall () {   
     return (
         <div>
             <Header />
