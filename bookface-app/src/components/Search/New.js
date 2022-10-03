@@ -34,7 +34,11 @@ function New({ placeholder, data }) {
 
   return (
     // <Box sx={{ width: '100%', maxWidth: 500, }}>
+<<<<<<< HEAD
+<div className="container-search" >
+=======
 <div className="container-search">
+>>>>>>> ecdd1671b3d6a8f691550d0a41fa45af60620e1a
     <div className="search">
 
       <div className="searchInputs">
@@ -73,17 +77,17 @@ function New({ placeholder, data }) {
         </div>
       )}
     </div>
-    <div className="gallery">
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
-            <img  className='item' src={setimage} alt="" />
+    <div className="gallery-search">
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
+            <img  className='searchitem' src={setimage} alt="" />
 
 
            </div>
