@@ -2,7 +2,6 @@ import * as React from 'react'
 import {Link} from 'react-router-dom'
 import Header from './header'
 import Navigation from './navigation'
-import Search from './Search/Search'
 import { jsx, css } from '@emotion/react';
 import New from './Search/New'
 import User from "./Search/BookData.json"
@@ -29,7 +28,6 @@ export default function Floor () {
     return (
         <div>
             {/* <Header /> */}
-            {/* <Search /> */}
 
             <New placeholder="Enter Name..." data={User} />
             <Navigation />

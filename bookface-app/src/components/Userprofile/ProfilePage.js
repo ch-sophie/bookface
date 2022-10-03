@@ -41,7 +41,7 @@ const ProfilePage = () => {
     </div>
     <div class="profile-info mobile-only">
       <div class="descriptions row">
-        <h1>apple</h1>
+        <h1>priti</h1>
         <span>
           Everyone has a story to tell.
           <br />
