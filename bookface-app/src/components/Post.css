@@ -109,6 +109,18 @@
       width: 30%;
       margin: 7px;
     }
-  
+
+
+    .gallery-search{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .searchitem{
+      width: 30%;
+      margin: 7px;
+    }
+
   
   
