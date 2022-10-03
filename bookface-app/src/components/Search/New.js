@@ -34,11 +34,7 @@ function New({ placeholder, data }) {
 
   return (
     // <Box sx={{ width: '100%', maxWidth: 500, }}>
-<<<<<<< HEAD
 <div className="container-search" >
-=======
-<div className="container-search">
->>>>>>> ecdd1671b3d6a8f691550d0a41fa45af60620e1a
     <div className="search">
 
       <div className="searchInputs">
