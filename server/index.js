@@ -9,6 +9,9 @@ const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/posts");
 
+
+const port = process.env.PORT || 3001;
+
 dotenv.config();
 
 // mongoose
@@ -35,11 +38,19 @@ app.use(cors);
 // })
 
 // Routes
-app.use("/users", userRouter);
-app.use("/auth", authRouter);
-app.use("/posts", postRouter);
+app.use("/api/users", userRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/posts", postRouter);
+
+
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+    });
+   }
 
 // PORT 
-app.listen(3001, () => {
-    console.log(`Server Started at ${3001}`)
+app.listen(port, () => {
+    console.log(`Server Started at ${port}`)
 })

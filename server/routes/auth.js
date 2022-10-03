@@ -3,7 +3,7 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 // register POST
-router.post("/register", async (req, res) => {
+router.post("/api/register", async (req, res) => {
     try {
         // generate new password
         // hash + salt to make password secure ++ 
@@ -30,7 +30,7 @@ router.post("/register", async (req, res) => {
 });
 
 // Login POST email and password
-router.post("/login", async (req, res) => {
+router.post("/api/login", async (req, res) => {
     try {
         const user = await User.findOne({ email: req.body.email });
         !user && res.status(404).json("user not found");
