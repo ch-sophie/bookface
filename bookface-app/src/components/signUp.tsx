@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -30,6 +30,9 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignUp() {
+
+  const navigate = useNavigate();
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -37,7 +40,33 @@ export default function SignUp() {
       email: data.get('email'),
       password: data.get('password'),
     });
-  };
+
+
+    let payload = {
+      "firstName": data.get('firstName'),
+      "lastName": data.get('lastName'),
+      "email": data.get('email'),
+      "password": data.get('password')
+    }
+
+    axios.post("http://localhost:3001/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: payload
+    })
+    .then((res) => {
+        // const { token } = res.data
+        // localStorage.setItem("token",token)
+    // dispatch(fetchLoginSuccess(res.data))
+    navigate("/signIn", { replace: true})
+    })
+    .catch(err => { console.log(err.response.data); });
+    };
+
+
+  
 
   return (
     <ThemeProvider theme={theme}>
