@@ -1,6 +1,6 @@
 import React from 'react'
 import image from './img/home1.jpg'
-import setimage from '../img/logo.png'
+// import setimage from '../img/logo.png'
 import Navigation from './navigation'
 import Header from './header'
 
@@ -14,7 +14,7 @@ const Profile = () => {
 
 			<div class="profile-image">
 
-				<img src={setimage} alt="" height={"150px"} width={'100px'} />
+				{/* <img src={setimage} alt="" height={"150px"} width={'100px'} /> */}
 
 			</div>
 
