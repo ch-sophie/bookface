@@ -13,8 +13,8 @@ const base = css`
     left: 50%;
     transform: translate(-50%);
     width: 90%;
-    height: 50;
-    fontSize: 25;
+    height: 50px;
+    fontSize: 25px;
     background-color: #fff;
     color: #000;
     display: inline-flex;

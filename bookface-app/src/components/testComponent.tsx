@@ -2,31 +2,58 @@ import * as React from 'react'
 import test from '../interfaces/interface'
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react';
+import axios from 'axios';
+import { Button } from '@mui/material';
 
 
-export default function Test (props: test) {
+export default function Test () {
+
+    const config = {
+        baseURL: "http://localhost:3001/",
+        header: {
+            "Content_type": "application/json"
+        }  
+    }
+
+    function fetchAxiosGet () {
+
+        axios.get("users/", config)
+          .then(result => console.log(result))
+          .catch(error => console.log(error));
+    }
+
+    function fetchAxiosPost () {
+
+        const data = {
+            "firstName": "Flor",
+            "lastName": "Pluym",
+            "email": "flor.pluym@gmail.com",
+            "password": "HelloWorld"
+        }
+
+        const configg = {
+            baseURL: "http://localhost:3001/",
+            header: {
+                "Content_type": "application/json"
+            },
+            data: data,
+        }
+
+        axios.post("auth/register", configg)
+          .then(result => console.log(result))
+          .catch(error => console.log(error));
+    }
+
+    
+
+    // axios(config)
+    // .then ((res) => {
+    //     console.log(res)
+    // })
     return (
-        <div css={css`
-            height: 500px;
-            width: 500px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid red;
-            @media (min-width: 420px) {
-                font-size: 50px;
-            }
-        `}
-        >
-            <h1 css={{
-                position: 'relative',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)'
-            }}
-            >
-                {props.text}</h1>
+        <div>
+            <Button onClick={fetchAxiosGet}>Get users</Button>
+            <Button onClick={fetchAxiosPost}>Get users</Button>
         </div>
     )
 }

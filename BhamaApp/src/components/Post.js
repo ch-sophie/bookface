@@ -11,14 +11,34 @@ import { useState } from "react";
 // import Avatar from '@mui/material/Avatar';
 
 export default function Post({ post }) {
-  console.log(Users);
-  const [like,setLike] = useState(post.like)
-  const [isLiked,setIsLiked] = useState(false)
 
-  const likeButton =()=>{
-    setLike(isLiked ? like-1 : like+1)
-    setIsLiked(!isLiked)
-  }
+  const [quote,setQuote]= useState("");
+  const [author,setAuthor]= useState("");
+  // https://type.fit/api/quotes
+  
+  useEffect(() =>{
+    fetch("http://localhost:3000/post/")
+    .then(res => res.json())
+    .then(
+      (quote)=>{
+        var rNum = Math.floor(Math.random() * 150 )
+        setQuote(quote[rNum].text);
+        setAuthor(quote[rNum].author);
+        console.log(quote)
+  
+      }
+    )
+  
+  },[])
+
+  // console.log(Users);
+  // const [like,setLike] = useState(post.like)
+  // const [isLiked,setIsLiked] = useState(false)
+
+  // const likeButton =()=>{
+  //   setLike(isLiked ? like-1 : like+1)
+  //   setIsLiked(!isLiked)
+  // }
 
   return (
     <div className="post">
