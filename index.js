@@ -25,9 +25,9 @@ app.use(morgan("common"));
 app.use(cors());
 
 // test
-app.get("/", (req, res) => {
-    res.send("Hello world");
-})
+// app.get("/", (req, res) => {
+//     res.send("Hello world");
+// })
 
 // test route users
 // app.get("/users", (req, res) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SignUp from './components/signUp';
+// import SignUp from './components/signUp';
 import SignIn from './components/signIn';
 // import Header from './components/header'
 // import TestComponent from './components/testComponent'
@@ -14,6 +14,7 @@ import Hall from './components/hall'
 import Floor from './components/floor'
 // import Profile from './components/Profile';
 // import Test from './components/testComponent';
+import Register from './components/Register';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Hall />} />
-      <Route path="signUp" element={<SignUp />} />
+      <Route path="Register" element={<Register />} />
       <Route path='signIn' element={<SignIn />} />
       <Route path='hall' element={<Hall />} />
       <Route path='floor' element={<Floor />} />
