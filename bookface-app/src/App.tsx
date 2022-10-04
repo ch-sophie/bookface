@@ -4,7 +4,7 @@ import './App.css';
 // import SignIn from './components/signIn';
 // import Header from './components/header'
 // import TestComponent from './components/testComponent'
-import Editprofile from './components/Editprofile';
+// import Editprofile from './components/Editprofile';
 import {
   // BrowserRouter,
   Routes,
@@ -27,7 +27,7 @@ function App() {
       <Route path='Login' element={<Login />} />
       <Route path='hall' element={<Hall />} />
       <Route path='floor' element={<Floor />} />
-      <Route path='profile' element={<Editprofile />} />
+      {/* <Route path='profile' element={<ProfilePage />} /> */}
     </Routes>
   );
 }

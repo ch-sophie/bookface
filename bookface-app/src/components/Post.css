@@ -42,8 +42,12 @@
   
   .postCenter{
       margin: 20px 0;
+
   }
-  
+  .postText{
+    margin: 1px;
+    float: left;
+  }
   .postImg{
       width: 100%;
       max-height: 500px;
@@ -94,3 +98,29 @@
       /* border-bottom: 1px dashed gray; */
       font-size: 15px;
   }
+
+  .gallery{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .item{
+      width: 30%;
+      margin: 7px;
+    }
+
+
+    .gallery-search{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .searchitem{
+      width: 30%;
+      margin: 7px;
+    }
+
+  
+  

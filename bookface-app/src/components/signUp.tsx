@@ -11,6 +11,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+// import { url } from 'inspector';
 
 import axios from 'axios';
 
@@ -41,12 +44,16 @@ export default function SignUp() {
       password: data.get('password'),
     });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53936404b29b24d76579c31a7321bdccd5fb14c5
     let payload = {
       "firstName": data.get('firstName'),
       "lastName": data.get('lastName'),
       "email": data.get('email'),
       "password": data.get('password')
+<<<<<<< HEAD
     }
 
     axios.post("http://localhost:3001/auth/register", {
@@ -67,6 +74,35 @@ export default function SignUp() {
 
 
   
+=======
+  }
+
+  // let config = {
+  //     method: "POST",
+  //     url: "https://localhost:3001/auth/register",
+  //     header: {
+  //         "Content_type": "application/json"
+  //     },
+  //     data: payload
+  // }
+
+
+  axios.post("http://localhost:3001/auth/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: payload
+  })
+  .then((res) => {
+      // const { token } = res.data
+      // localStorage.setItem("token",token)
+  // dispatch(fetchLoginSuccess(res.data))
+  navigate("/signIn", { replace: true})
+  })
+  .catch(err => { console.log(err); });
+  };
+>>>>>>> 53936404b29b24d76579c31a7321bdccd5fb14c5
 
   return (
     <ThemeProvider theme={theme}>

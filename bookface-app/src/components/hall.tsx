@@ -5,18 +5,12 @@ import Navigation from './navigation'
 import Post from './Post'
 import { Datas } from './Datas'
 
-export default function Hall () {
+export default function Hall () {   
     return (
         <div>
             <Header />
             {Datas.map((p => (<Post key= {p.id} post={p} />) ))}
             <Navigation />
-            <h1>Hall</h1>
-            {Datas.map((p => (
-      <Post key= {p.id} post={p} />
-
-     ) ))}
-             <Navigation />
         </div>
     )
 }

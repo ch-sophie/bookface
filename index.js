@@ -9,11 +9,13 @@ const userRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/posts");
 
+
+const port = process.env.PORT || 3001;
+
 dotenv.config();
 
-// mongoose
-// connect to my database
-mongoose.connect('mongodb+srv://soph:social-app123@users.twgqlhj.mongodb.net/?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true})
+// mongoose connect to my database
+mongoose.connect("mongodb+srv://soph:social-app123@users.twgqlhj.mongodb.net/?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology : true})
 .then(() => console.log('connected to database'))
 .catch((err) => console.log(err));
 
@@ -39,7 +41,8 @@ app.use("/users", userRouter);
 app.use("/auth", authRouter);
 app.use("/posts", postRouter);
 
+
 // PORT 
-app.listen(3001, () => {
-    console.log(`Server Started at ${3001}`)
+app.listen(port, () => {
+    console.log(`Server Started at ${port}`)
 })
