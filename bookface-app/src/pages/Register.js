@@ -58,7 +58,7 @@ export default function Create() {
         
         setForm({ firstName: "", lastName: "", email: "", password: "" });
         
-        navigate("/signIn");
+        navigate("/signintest");
     }
     
     return (
@@ -159,7 +159,7 @@ export default function Create() {
                     
                     <Grid container justifyContent="flex-end">
                         <Grid item>
-                            <Link to='/signIn'>
+                            <Link to='/signintest'>
                             Already have an account? Sign in
                             </Link>
                         </Grid>
