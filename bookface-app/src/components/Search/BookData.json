@@ -1,52 +1,52 @@
 [
   {
     "id":1,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user7.jpg",
     "username": "Bhama"
   },
   {
     "id":2,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user2.jpg",
      "username": "sophie"
   },
   {
     "id":3,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user3.jpg",
      "username": "Alex Durden"
   },
   {
     "id":4,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user4.jpg",
      "username": "Dora Hawks"
   },
   {
     "id":5,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user5.jpg",
      "username": "Thomas Holden"
   },
   {
     "id":6,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user6.jpg",
      "username": "Shirley Beauchamp"
   },
   {
     "id":7,
-     "profilePicture": "home1.jpg",
+     "profilePicture": "user1.jpg",
      "username": "Travis Bennett"
   },
   {
     "id":8,
-     "profilePicture": "logo1.png",
+     "profilePicture": "user8.jpg",
     "username": "Kristen Thomas"  
   },
   {
     "id":9,
-    "profilePicture": "logo1.png",
+    "profilePicture": "user9.jpg",
     "username": "Gary Duty"
   },
   {
     "id":10,
-    "profilePicture": "logo1.png",
+    "profilePicture": "user10.jpg",
     "username": "Safak Kocaoglu"
   }
   ]

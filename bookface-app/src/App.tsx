@@ -12,7 +12,6 @@ import {
 } from "react-router-dom";
 import Hall from './components/hall'
 import Floor from './components/floor'
-import Profile from './components/Profile';
 import Test from './components/testComponent';
 import ProfilePage from './components/Userprofile/ProfilePage';
 

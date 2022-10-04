@@ -1,52 +1,52 @@
 export const Users = [
   {
     id:1,
-    profilePicture: "home1",
+    profilePicture: "user1",
     username: "Bhama",
   },
   {
     id:2,
-    profilePicture: "home1",
+    profilePicture: "user2",
     username: "sophie",
   },
   {
     id:3,
-    profilePicture: "home1",
+    profilePicture: "user3",
     username: "Alex Durden",
   },
   {
     id:4,
-    profilePicture: "home1",
+    profilePicture: "user4",
     username: "Dora Hawks",
   },
   {
     id:5,
-    profilePicture: "home1",
+    profilePicture: "user5",
     username: "Thomas Holden",
   },
   {
     id:6,
-    profilePicture: "home1",
+    profilePicture: "user6",
     username: "Shirley Beauchamp",
   },
   {
     id:7,
-    profilePicture: "home1",
+    profilePicture: "user7",
     username: "Travis Bennett",
   },
   {
     id:8,
-    profilePicture: "home1",
+    profilePicture: "user8",
     username: "Kristen Thomas",
   },
   {
     id:9,
-    profilePicture: "home1",
+    profilePicture: "user9",
     username: "Gary Duty",
   },
   {
     id:10,
-    profilePicture: "home1",
+    profilePicture: "user10",
     username: "Safak Kocaoglu",
   },
 ];
