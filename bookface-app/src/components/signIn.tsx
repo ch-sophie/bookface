@@ -11,9 +11,9 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import SignUp from './signUp';
+import SignUp from './signUp';
 import {Link, useNavigate} from 'react-router-dom'
-// import axios from "axios"
+import axios from "axios"
 
 function Copyright(props: any) {
   return (
