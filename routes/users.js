@@ -50,7 +50,7 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-// delete userId
+// delete userId in localhost and raw form
 router.delete("/:id", async (req, res) => {
     if (req.body.userId === req.params.id) {
         try {
