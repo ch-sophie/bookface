@@ -1,6 +1,13 @@
 import React from 'react'
 import './Style.css'
-import setimage from '../img/home1.jpg'
+import setimage from '../img/user7.jpg'
+import user1 from '../img/book7.jpg'
+import user2 from '../img/book1.jpg'
+import user3 from '../img/book2.jpg'
+import user4 from '../img/book3.jpg'
+import user5 from '../img/book4.jpg'
+import user6 from '../img/book6.jpg'
+
 
 
 const ProfilePage = () => {
@@ -130,25 +137,25 @@ const ProfilePage = () => {
 
       <div class="gallery">
         <div class="gallery-item">
-          <img alt="gallery-post" src={setimage}/>
+          <img alt="gallery-post" src={user1}/>
           <span class="media-icon"></span>
         </div>
         <div class="gallery-item">
-        <img alt="gallery-post" src={setimage}/>
+        <img alt="gallery-post" src={user2}/>
           <span class="media-icon"></span>
         </div>
         <div class="gallery-item">
-        <img alt="gallery-post" src={setimage}/>
+        <img alt="gallery-post" src={user3}/>
           <span class="media-icon"></span>
         </div>
         <div class="gallery-item">
-        <img alt="gallery-post" src={setimage}/>
+        <img alt="gallery-post" src={user4}/>
         </div>
         <div class="gallery-item">
-        <img alt="gallery-post" src={setimage}/>
+        <img alt="gallery-post" src={user5}/>
         </div>
         <div class="gallery-item">
-        <img alt="gallery-post" src={setimage}/>
+        <img alt="gallery-post" src={user6}/>
           <span class="media-icon"></span>
         </div>
       </div>
