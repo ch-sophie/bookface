@@ -13,7 +13,7 @@ router.get("/:id", async (req, res) => {
     }
 });
 
-// get all users
+// get all  users
 router.get("/", async (req, res) => {
     try {
         const user = await User.find({}).then(function (user) {
@@ -50,7 +50,7 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-// delete userId
+// delete userId in localhost and raw form
 router.delete("/:id", async (req, res) => {
     if (req.body.userId === req.params.id) {
         try {

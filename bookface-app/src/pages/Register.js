@@ -58,7 +58,7 @@ export default function Create() {
         
         setForm({ firstName: "", lastName: "", email: "", password: "" });
         
-        navigate("/signintest");
+        navigate("/login");
     }
     
     return (
@@ -131,6 +131,7 @@ export default function Create() {
                             required
                             fullWidth
                             id="password"
+                            type="password"
                             label="Password"
                             autoFocus
                             value={form.password}
@@ -159,7 +160,7 @@ export default function Create() {
                     
                     <Grid container justifyContent="flex-end">
                         <Grid item>
-                            <Link to='/signintest'>
+                            <Link to='/login'>
                             Already have an account? Sign in
                             </Link>
                         </Grid>
