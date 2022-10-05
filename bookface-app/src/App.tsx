@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-// import SignUp from './components/signUp';
-// import SignIn from './components/signIn';
 // import Header from './components/header'
 // import TestComponent from './components/testComponent'
 // import Editprofile from './components/Editprofile';
@@ -12,11 +10,10 @@ import {
 } from "react-router-dom";
 import Hall from './components/hall'
 import Floor from './components/floor'
-// import Profile from './components/Profile';
+import Profile from './components/Userprofile/ProfilePage';
 // import Test from './components/testComponent';
 import Register from './pages/Register';
 import Login from './pages/login';
-
 
 function App() {
   return (
@@ -27,7 +24,7 @@ function App() {
       <Route path='Login' element={<Login />} />
       <Route path='hall' element={<Hall />} />
       <Route path='floor' element={<Floor />} />
-      {/* <Route path='profile' element={<ProfilePage />} /> */}
+      <Route path='profile' element={<Profile />} />
     </Routes>
   );
 }

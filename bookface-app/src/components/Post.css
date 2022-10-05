@@ -32,8 +32,9 @@
   
   .postUsername {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 10px;
+    color: #152055;
   }
   
   .postDate{

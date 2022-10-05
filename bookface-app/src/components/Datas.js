@@ -2,12 +2,12 @@ export const Users = [
   {
     id:1,
     profilePicture: "user1",
-    username: "Bhama",
+    username: "Alex Hawks",
   },
   {
     id:2,
     profilePicture: "user2",
-    username: "sophie",
+    username: "Alex B",
   },
   {
     id:3,
@@ -54,8 +54,8 @@ export const Users = [
 export const Datas = [
   {
     id: 1,
-    desc: "Love For All, Hatred For None.",
-    photo: "book2.jpg",
+    desc: "How Innovation works, and Why It Flourishes in Freedom.",
+    photo: "book5.jpg",
     date: "5 mins ago",
     userId: 1,
     like: 32,
@@ -137,4 +137,5 @@ export const Datas = [
     comment: 12,
   },
 ];
+
 export default Datas

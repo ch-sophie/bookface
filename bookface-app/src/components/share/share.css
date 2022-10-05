@@ -1,0 +1,34 @@
+.sharetop{
+    margin-top: 100px;
+}
+.buttonshare{
+    border: none;
+    margin-bottom: 30px;
+    padding: 7px;
+    border-radius: 10px !important;
+    background-color: #152055;
+    font-weight: 500;
+    margin-left: 42%;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.shareInput {
+    width: 46%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    margin: 30px 0;
+    margin: auto;
+}
+
+@media screen and  (max-width:768px) {
+    .shareInput{
+        width: 100%;
+    }
+    .buttonshare{
+        margin-left: 75%;
+    }
+}
