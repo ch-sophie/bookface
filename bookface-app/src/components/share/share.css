@@ -1,5 +1,5 @@
 .sharetop{
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .buttonshare{
     border: none;
@@ -14,7 +14,7 @@
     font-weight: bold;
 }
 .shareInput {
-    width: 47%;
+    width: 46%;
     padding: 20px;
     border: none;
     border-radius: 10px;

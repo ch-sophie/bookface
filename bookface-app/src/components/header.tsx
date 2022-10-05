@@ -11,6 +11,7 @@ const base = css`
     left: 50%;
     transform: translate(-50%);
     width: 90%;
+    padding: 1%;
     height: 100;
     fontSize: 25;
     background-color: #fff;
