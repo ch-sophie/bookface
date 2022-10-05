@@ -19,9 +19,11 @@ function App() {
   return (
 
     <Routes>
+
       <Route path="/" element={<Register />} />
       <Route path="Register" element={<Register />} />
       <Route path='Login' element={<Login />} />
+
       <Route path='hall' element={<Hall />} />
       <Route path='floor' element={<Floor />} />
       <Route path='profile' element={<Profile />} />

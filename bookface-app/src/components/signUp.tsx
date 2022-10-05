@@ -69,7 +69,9 @@ export default function SignUp() {
   .then((res) => {
       // const { token } = res.data
       // localStorage.setItem("token",token)
+
   // dispatch(fetchLoginSuccess(res.data))
+  console.log(res)
   navigate("/signIn", { replace: true})
   })
   .catch(err => { console.log(err); });
