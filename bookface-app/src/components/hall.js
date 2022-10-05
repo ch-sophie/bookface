@@ -5,7 +5,7 @@ import Navigation from './navigation'
 import Post from './Post'
 import axios from "axios";
 
-// import { Datas } from './Datas'
+import { Datas } from './Datas'
 
 export default function Hall () {   
     // const [posts, setPosts] = useState([]);
@@ -22,7 +22,7 @@ export default function Hall () {
     return (
         <div>
             <Header />
-            {/* {Datas.map((p => (<Post key= {p.id} post={p} />) ))} */}
+            {Datas.map((p => (<Post key= {p.id} post={p} />) ))}
             <Navigation />
         </div>
     )
