@@ -5,16 +5,15 @@ import Navigation from './navigation'
 import Post from './Post'
 import axios from "axios";
 
-import { Datas } from './Datas'
+// import { Datas } from './Datas'
 
 export default function Hall () {   
     // const [posts, setPosts] = useState([]);
 
     // useEffect(() => {
     //     const fetchPosts = async () => {
-    //         const res =  await axios.get('http://localhost:3001/server/posts/timeline/632c29f072af353e94936d25')
+    //         const res = await axios.get('/posts/632b215b055cc33d9c00d6ac')
     //         console.log(res);
-
     //     };
     //     fetchPosts();
     // },[])
@@ -23,7 +22,7 @@ export default function Hall () {
     return (
         <div>
             <Header />
-            {Datas.map((p => (<Post key= {p.id} post={p} />) ))}
+            {/* {Datas.map((p => (<Post key= {p.id} post={p} />) ))} */}
             <Navigation />
         </div>
     )
