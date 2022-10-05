@@ -75,6 +75,9 @@ const Login = () => {
     return (
     <>
     <ThemeProvider theme={theme}>
+    <div className="banner">
+            Bookface
+        </div>
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <Box

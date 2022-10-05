@@ -60,11 +60,15 @@ export default function Create() {
     
     return (
     <ThemeProvider theme={theme}>
+        <div className="banner">
+            Bookface
+        </div>
         <Container component="main" maxWidth="xs">
+            
             <CssBaseline />
             <Box
             sx={{
-                marginTop: 8,
+                marginTop: 6,
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -151,6 +155,7 @@ export default function Create() {
                     variant="contained"
                     sx={{ mt: 3, mb: 2 }}
                     value="Register"
+                    className="buttonsubmit"
                     >
                     Sign Up
                     </Button>

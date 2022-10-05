@@ -4,14 +4,14 @@
 .buttonshare{
     border: none;
     margin-bottom: 30px;
-    padding: 7px;
+    padding: 10px;
     border-radius: 10px !important;
-    background-color: #152055;
-    font-weight: 500;
-    margin-left: 42%;
+    background-color: #1976d2;
+    font-weight: 600;
+    font-size: medium;
+    /* margin-left: 42%; */
     cursor: pointer;
     color: white;
-    font-weight: bold;
 }
 .shareInput {
     width: 46%;
@@ -28,7 +28,7 @@
     .shareInput{
         width: 100%;
     }
-    .buttonshare{
+    /* .buttonshare{
         margin-left: 75%;
-    }
+    } */
 }

@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.banner{
+  background-color: #1976d2;
+  color: #fff;
+  font-weight: 700;
+  font-size: x-large;
+  padding: 20px;
+}
