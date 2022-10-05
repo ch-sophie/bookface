@@ -21,7 +21,7 @@ const Editprofile = () => {
                 </div>
 
             </div>
-            <div style={{ display: "flex", margin: "5px 20px",borderBottom:'1px solid grey',paddingBottom:'10px' }}>
+            {/* <div style={{ display: "flex", margin: "5px 20px",borderBottom:'1px solid grey',paddingBottom:'10px' }}>
             <Stack direction="row" spacing={6} >
             <Avatar alt="Travis Howard" src={setimage}   sx={{ width: 76, height: 76,}}/>
       <Avatar alt="Travis Howard" src={setimage}   sx={{ width: 76, height: 76 }}/>
@@ -29,14 +29,10 @@ const Editprofile = () => {
       <Avatar alt="Travis Howard" src={setimage}  sx={{ width: 76, height: 76 }}/>
       <Avatar alt="Cindy Baker" src={setimage}  sx={{ width: 76, height: 76 }}/>
       <Avatar alt="Remy Sharp" src={setimage}   sx={{ width: 76, height: 76 }}/>
-      <Avatar alt="Travis Howard" src={setimage}   sx={{ width: 76, height: 76 }}/>
-      <Avatar alt="Cindy Baker" src={setimage}  sx={{ width: 76, height: 76 }} />
-      <Avatar alt="Travis Howard" src={setimage}  sx={{ width: 76, height: 76 }}/>
-      <Avatar alt="Cindy Baker" src={setimage}  sx={{ width: 76, height: 76 }}/>
 
     </Stack>
     </div>
-
+ */}
 
 
             <div className="gallery">

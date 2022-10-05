@@ -13,6 +13,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+// import { url } from 'inspector';
 
 function Copyright(props: any) {
   return (
@@ -30,7 +31,8 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignUp() {
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -47,18 +49,27 @@ export default function SignUp() {
       "password": data.get('password')
   }
 
-  let config = {
-      url: "https://localhost:3001/auth/register",
-      header: {
-          "Content_type": "application/json"
-      },
-      data: payload
-  }
+  // let config = {
+  //     method: "POST",
+  //     url: "https://localhost:3001/auth/register",
+  //     header: {
+  //         "Content_type": "application/json"
+  //     },
+  //     data: payload
+  // }
 
-  axios.post("https://localhost:3001/auth/register", payload)
+
+  axios.post("/api/auth/register", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: payload
+  })
   .then((res) => {
-      //const { token } = res.data
-      //localStorage.setItem("token",token)
+      // const { token } = res.data
+      // localStorage.setItem("token",token)
+
   // dispatch(fetchLoginSuccess(res.data))
   console.log(res)
   navigate("/signIn", { replace: true})

@@ -1,16 +1,47 @@
 import "./Post.css";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 // import  Users  from "../img/logo.png";
-import  logo  from "./img/home2.jpg";
+// import  logo  from "./img/home2.jpg";
+import axios from "axios";
 import { Users } from "./Datas  ";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import SmsOutlinedIcon from '@mui/icons-material/SmsOutlined';
 // import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 // import Avatar from '@mui/material/Avatar';
 
 export default function Post({ post }) {
+<<<<<<< HEAD
+  console.log(Users);
+  const [like,setLike] = useState(post.like)
+  const [isLiked,setIsLiked] = useState(false);
+  const [user, setUser] = useState({});
+  // const PF = process.env.REACT_APP_PUBLIC_FOLDER; 
+  const {user: currentUser} = useContext(AuthContext);
+
+  useEffect(() => {
+    setIsLiked(post.likes.includes(currentUser._id));
+  }, [currentUser._id, post.likes]);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const res = await axios.get( `/users?userId=${post.userId}`);
+      setUser(res.data);
+    }
+    fetchUser();
+  }, [post.userId]);
+
+  const likeButton = () => {
+    try {
+      axios.put("/post/" + post._id + "/like", { userId: currentUser._id});
+    } catch (err) {}
+    setLike(isLiked ? like -1 : like +1);
+    setIsLiked(!isLiked);
+  }
+=======
 
   const [quote,setQuote]= useState("");
   const [author,setAuthor]= useState("");
@@ -39,13 +70,14 @@ export default function Post({ post }) {
   //   setLike(isLiked ? like-1 : like+1)
   //   setIsLiked(!isLiked)
   // }
+>>>>>>> 53936404b29b24d76579c31a7321bdccd5fb14c5
 
   return (
     <div className="post">
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
-            
+            <Link to={`/profile/${user.username}`}>
             <img
             src={require('./img/' +
             Users.filter((u) => u.id === post.userId)[0].profilePicture +
@@ -53,7 +85,7 @@ export default function Post({ post }) {
               className="postProfileImg"
               alt=""
             />
-
+            </Link>
             <span className="postUsername">
               {Users.filter((u) => u.id === post?.userId)[0].username}
             </span>
