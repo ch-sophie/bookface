@@ -10,8 +10,8 @@ import { css, jsx } from '@emotion/react'
 // import Avatar from '@mui/material/Avatar';
 
 const base = css`
-  @media (min-width: 600px) {
-    width: 600px;
+  @media (min-width: 470px) {
+    width: 470px;
   }
 `
 

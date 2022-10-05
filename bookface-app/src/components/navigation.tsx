@@ -10,8 +10,6 @@ import { jsx, css } from '@emotion/react';
 const base = css`
     position: fixed;
     bottom: 0px;
-    left: 50%;
-    transform: translate(-50%);
     width: 90%;
     height: 50px;
     fontSize: 25px;
@@ -19,9 +17,6 @@ const base = css`
     color: #000;
     display: inline-flex;
     justify-content: space-around;
-    @media (min-width: 600px) {
-        width: 600px;
-    }
 `
 
 const styleLink = css`

@@ -1,6 +1,6 @@
 import React from 'react'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Users from './Users'
+import Users from '../Users'
 import {  useState } from "react";
 import Table from './Table';
 import './style.css'
