@@ -28,18 +28,15 @@ export default function Create() {
   
     const navigate = useNavigate();
     
-    // update the state properties
     function updateForm(value) {
         return setForm((prev) => {
             return { ...prev, ...value };
         });
     }
- 
-    // handle submission
+
     async function handleSubmit(e) {
         e.preventDefault();
     
-        // when a post request is sent to the create url, it will add a new record to the database
         const newItem = { ...form };
  
         await fetch("http://localhost:3001/auth/register", {

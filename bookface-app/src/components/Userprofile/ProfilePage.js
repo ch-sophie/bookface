@@ -7,6 +7,7 @@ import user3 from '../img/book2.jpg'
 import user4 from '../img/book3.jpg'
 import user5 from '../img/book4.jpg'
 import user6 from '../img/book6.jpg'
+import Navigation from '../navigation'
 
 
 
@@ -159,6 +160,7 @@ const ProfilePage = () => {
           <span class="media-icon"></span>
         </div>
       </div>
+      <Navigation />
       </main>
 </body>
   </div>
