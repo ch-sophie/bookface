@@ -8,12 +8,13 @@
     border-radius: 10px !important;
     background-color: rgb(21, 32, 85);
     font-weight: 500;
-    margin-left: 46%;
+    margin-left: 42%;
     cursor: pointer;
     color: white;
+    font-weight: bold;
 }
 .shareInput {
-    width: 50%;
+    width: 47%;
     padding: 20px;
     border: none;
     border-radius: 10px;

@@ -50,7 +50,7 @@ export default function Create() {
       <form onSubmit={onSubmit}>
         <div className="form">
           <label htmlFor="comment"></label>
-          <input type="text" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ desc: e.target.value })} />
+          <input type="text" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ userId: e.target.value, desc: e.target.value })} />
         </div>
         <br />
 
