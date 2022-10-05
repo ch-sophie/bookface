@@ -11,6 +11,7 @@ export default function Hall () {
         <div>
             <Header />
             <Share />
+            
             {Datas.map((p => (<Post key= {p.id} post={p} />) ))}
             <Navigation />
         </div>

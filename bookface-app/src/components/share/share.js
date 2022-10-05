@@ -5,7 +5,7 @@ import './share.css';
  
 export default function Create() {
   const [form, setForm] = useState({
-    
+    userId: "",
     desc: "",
     
   });
@@ -38,7 +38,7 @@ export default function Create() {
       return;
     });
  
-    setForm({  desc: "" });
+    setForm({ userId: "", desc: "" });
     
     navigate("/hall");
   }
@@ -50,7 +50,7 @@ export default function Create() {
       <form onSubmit={onSubmit}>
         <div className="form">
           <label htmlFor="comment"></label>
-          <input type="text" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ desc: e.target.value })} />
+          <input type="text" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ userId: e.target.value, desc: e.target.value })} />
         </div>
         <br />
 
