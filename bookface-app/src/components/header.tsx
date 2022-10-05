@@ -7,14 +7,16 @@ import NotificationsNoneRoundedIcon from '@mui/icons-material/NotificationsNoneR
 
 const base = css`
     position: fixed;
-    top: 0px;
+    top: 10px;
     left: 50%;
     transform: translate(-50%);
     width: 90%;
+    padding: 1%;
     height: 100;
     fontSize: 25;
     background-color: #fff;
-    color: #000;
+    color: #152055;
+    font-weight: bold;
     display: inline-flex;
     justify-content: space-between;
     font-size: 25px;

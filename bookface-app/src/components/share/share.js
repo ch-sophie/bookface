@@ -7,7 +7,7 @@ export default function Create() {
   const [form, setForm] = useState({
     userId: "",
     desc: "",
-    img: "",
+    
   });
   
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function Create() {
       return;
     });
  
-    setForm({ userId: "", desc: "", img: "" });
+    setForm({ userId: "", desc: "" });
     
     navigate("/hall");
   }
@@ -50,7 +50,7 @@ export default function Create() {
       <form onSubmit={onSubmit}>
         <div className="form">
           <label htmlFor="comment"></label>
-          <input type="text" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ desc: e.target.value })} />
+          <input type="text" placeholder="Add a book recommendation?" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ userId: e.target.value, desc: e.target.value })} />
         </div>
         <br />
 
