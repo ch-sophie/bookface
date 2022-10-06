@@ -12,18 +12,17 @@ export default function Create() {
   
   const navigate = useNavigate();
   
-  // update the state properties
+
   function updateForm(value) {
     return setForm((prev) => {
       return { ...prev, ...value };
     });
   }
  
-  // handle submission
   async function onSubmit(e) {
     e.preventDefault();
+    alert(`Your message was: ${form.desc}`);
     
-    // when a post request is sent to the create url, it will add a new record to the database
     const newItem = { ...form };
  
     await fetch("http://localhost:3001/posts", {
@@ -50,7 +49,7 @@ export default function Create() {
       <form onSubmit={onSubmit}>
         <div className="form">
           <label htmlFor="comment"></label>
-          <input type="text" placeholder="Add a book recommendation?" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ userId: e.target.value, desc: e.target.value })} />
+          <input type="text" placeholder="What do you want to talk about?" className="shareInput" id="desc" value={form.desc} onChange={(e) => updateForm({ userId: e.target.value, desc: e.target.value })} />
         </div>
         <br />
 
