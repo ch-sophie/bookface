@@ -1,8 +1,5 @@
 import React from 'react';
 import './App.css';
-// import Header from './components/header'
-// import TestComponent from './components/testComponent'
-// import Editprofile from './components/Editprofile';
 import {
   // BrowserRouter,
   Routes,
@@ -11,7 +8,6 @@ import {
 import Hall from './components/hall'
 import Floor from './components/floor'
 import Profile from './components/Userprofile/ProfilePage';
-// import Test from './components/testComponent';
 import Register from './pages/Register';
 import Login from './pages/login';
 

@@ -1,5 +1,4 @@
 import * as React from 'react'
-import {Link} from 'react-router-dom'
 import Header from './header'
 import Navigation from './navigation'
 import Post from './Post'
