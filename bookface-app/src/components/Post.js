@@ -1,19 +1,14 @@
 import "../components/Post.css";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Users } from "./Datas";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from "react";
-// import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from '@emotion/react'
 
-// import Avatar from '@mui/material/Avatar';
-
 const base = css`
-  @media (min-width: 600px) {
-    width: 600px;
-  }
-`
+  @media (min-width: 470px) {
+    width: 470px;
+  }`
 
 export default function Post({ post }) {
   console.log(post);
@@ -44,9 +39,6 @@ export default function Post({ post }) {
               {post.date}
               </span>
           </div>
-          <div className="postTopRight">
-            <MoreVertIcon />
-          </div>
         </div>
         <div className="postCenter">
            <span className="postText">{post?.desc}</span> 
@@ -60,7 +52,7 @@ export default function Post({ post }) {
         <div className="postBottom">
           <div className="postBottomLeft">
          <span className="likeIcon" onClick={likeButton} >{<FavoriteIcon />}</span> 
-         {/* <span className="likeIcon-comments" >{<ChatBubbleOutlineOutlinedIcon />}</span>  */}
+         
           </div>
           <div className="postBottomRight">
             <span className="postCommentText"> {like}  people like it</span>

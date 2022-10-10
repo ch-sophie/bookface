@@ -65,7 +65,7 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
-// follow
+// follow userId
 router.put("/:id/follow", async (req, res) => {
     if (req.body.userId !== req.params.id) {
         try {
