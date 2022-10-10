@@ -5,7 +5,7 @@
 - **Bhama Guruswami**  
 - **Arthur Pluym**  
 
-### Mission:  
+### :ledger: Mission:  
 Good morning,   
 
 If you receive this email, it means that you've been selected to carry on the development of my new (amazing) Web Platform.
@@ -50,7 +50,7 @@ Zack Trurenberck.
     - Improve the floor page, the design
 
 ### Preview:
-#### Home
+#### Home page
 <img src="main.png" style="width:50%;" /> 
 
 #### Register 
