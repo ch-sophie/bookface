@@ -55,7 +55,6 @@ export default function Create() {
 
         <div className="form">
           <input type="submit" value="Share" className="buttonshare" />
-          {/* <a href="/" class="cancel" className="btn buttonform">Cancel</a> */}
         </div>
       </form>
     </div>
