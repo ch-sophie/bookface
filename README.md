@@ -48,6 +48,7 @@ Zack Trurenberck.
 #### Pending: 
     - Connect the frontend and backend 
     - Improve the floor page, the design
+    - Deployment
 
 ### Preview:
 #### Home page
