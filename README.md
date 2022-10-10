@@ -50,4 +50,8 @@ Zack Trurenberck.
     - Improve the floor page, the design
 
 ### Preview:
-![Main page](/main.png) 
+#### Home
+<img src="main.png" style="width:50%;" /> 
+
+#### Register 
+<img src="register.png" style="width:40%;" />
