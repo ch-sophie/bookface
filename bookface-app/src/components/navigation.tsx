@@ -16,7 +16,7 @@ const base = css`
     height: 50px;
     fontSize: 25px;
     background-color: #fff;
-    color: #000;
+    color: #1976d2;
     display: inline-flex;
     justify-content: space-around;
     @media (min-width: 600px) {
@@ -27,7 +27,7 @@ const base = css`
 const styleLink = css`
     &:visited {
         text-decoration: none;
-        color: #000;
+        color: #1976d2;
     }
 `
 
