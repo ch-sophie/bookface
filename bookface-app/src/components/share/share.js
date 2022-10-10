@@ -21,7 +21,7 @@ export default function Create() {
  
   async function onSubmit(e) {
     e.preventDefault();
-    alert(`Your message was: ${form.desc}`);
+    
     
     const newItem = { ...form };
  
