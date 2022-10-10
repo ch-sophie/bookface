@@ -1,13 +1,10 @@
 import "../components/Post.css";
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { Users } from "./Datas";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from "react";
 // import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 /** @jsxImportSource @emotion/react */
 import { css, jsx } from '@emotion/react'
-
-// import Avatar from '@mui/material/Avatar';
 
 const base = css`
   @media (min-width: 470px) {
